@@ -1,5 +1,5 @@
 let anchors = document.querySelectorAll('#header nav a');
-let sections = document.querySelectorAll('.section-ing');
+let sections = document.querySelectorAll('.indice');
 let selected = document.querySelector('#corte1');
 anchors = Array.from(anchors);
 

@@ -146,6 +146,7 @@ header nav a {
     padding: 0 20px;
     align-items: center;
     display: inherit;
+    word-break: none;
     transition: 150ms ease
 }
 header nav a:hover { color: var(--color) }
@@ -175,14 +176,14 @@ header nav a:active { color: var(--color2) }
     color: var(--color);
 }
 
-.section-ing {
+.section {
     margin: 100px 6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
 }
-.section-ing > h1 { color: var(--color) }
+.section > h1 { color: var(--color) }
 
 article {
     display: flex;
@@ -233,6 +234,80 @@ article iframe {
     object-fit: cover;
     border-radius: 3px;
 }
+
+#miembros {
+    width: 100%;
+}
+#miembros > div {
+    min-width: 100%;
+    position: relative;
+}
+#miembros div div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#miembros div div:hover i {
+    background: #1114;
+    backdrop-filter: blur(3px);
+}
+
+.miembro {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    transition: 170ms ease;
+}
+.miembro:nth-child(1) {
+    width: 19%;
+    background:#f004;
+}
+.miembro:nth-child(2) {
+    width: 19%;
+    background:#0f04;
+}
+.miembro:nth-child(3) {
+    width: 18%;
+    background:#00f4;
+}
+.miembro:nth-child(4) {
+    width: 13%;
+    background:#f704;
+}
+.miembro:nth-child(5) {
+    width: 14%;
+    background:#f004;
+}
+.miembro:nth-child(6) {
+    width: 17%;
+    background:#0ef4;
+}
+#miembros .miembro:hover {
+    backdrop-filter: blur(0px);
+    background: #0000;
+}
+.miembro:hover span {
+    translate: 0;
+}
+.miembro span {
+    background: var(--color2);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    translate: 0 -100%;
+    transition: 170ms ease;
+}
+
+
+#miembros img {
+    width: 100%;
+}
+
 footer {
     color: #464972b7;
     width: 100%;
@@ -287,9 +362,17 @@ footer {
         box-shadow: 0 0 10px var(--sombra);
         opacity: 1;
     }
+
+    .miembro span {
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 500px) {
     body::-webkit-scrollbar { display: none }
     #landing h1 { font-size: 80px; }
+
+    .miembro span {
+        font-size: 8px;
+    }
 }
