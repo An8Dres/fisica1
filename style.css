@@ -183,7 +183,14 @@ header nav a:active { color: var(--color2) }
     justify-content: center;
     gap: 50px;
 }
-.section > h1 { color: var(--color) }
+.section > h1 { 
+    background: var(--color2);
+    color: #fff;
+    width: min(100%, 180px);
+    padding: 10px 20px;
+    border-radius: 5px;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
 
 article {
     display: flex;
